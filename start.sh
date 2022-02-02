@@ -5,7 +5,7 @@ then
   git clone https://github.com/impta/abubbax /ahubbax
 else
   echo "Cloning $BRANCH branch...."
-  git clone https://github.com/subinps/ahubbax -b $BRANCH /ahubbax
+  git clone https://github.com/impta/ahubbax -b $BRANCH /ahubbax
 fi
 cd /ahubbax
 pip3 install -U -r requirements.txt
