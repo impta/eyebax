@@ -7,8 +7,6 @@ services:
     region: oregon # optional (defaults to oregon)
     plan: free # optional (defaults to starter)
     branch: main # optional (uses repo default)
-    dockerCommand: ./start.sh # optional (defaults to Dockerfile command)
-    healthCheckPath: /
     envVars:
       - key: ADMIN_ONLY
         value: True
