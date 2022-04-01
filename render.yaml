@@ -1,0 +1,84 @@
+services:
+  # A Docker web service
+  - type: web
+    name: webdis
+    env: docker
+    repo: https://github.com/impta/navamoon2.git # optional
+    region: oregon # optional (defaults to oregon)
+    plan: standard # optional (defaults to starter)
+    branch: main # optional (uses repo default)
+    dockerCommand: ./start.sh # optional (defaults to Dockerfile command)
+    numInstances: 3 # optional (defaults to 1)
+    healthCheckPath: /
+    envVars:
+      - key: ADMIN_ONLY
+        fromService:
+          type: redis
+          name: lightning
+          property: host # available properties are listed below
+      - key: ADMINS
+        fromService:
+          type: redis
+          name: lightning
+          property: port
+      - key: API_HASH
+        fromService:
+          type: redis
+          name: lightning
+          property: port
+      - key: API_ID
+        fromService:
+          type: redis
+          name: lightning
+          property: port
+      - key: BOT_TOKEN
+        fromService:
+          type: redis
+          name: lightning
+          property: port
+      - key: CHAT
+        fromService:
+          type: redis
+          name: lightning
+          property: port
+      - key: DATABASE_URI
+        fromService:
+          type: redis
+          name: lightning
+          property: port
+      - key: HEROKU_API_KEY
+        fromService:
+          type: redis
+          name: lightning
+          property: port
+      - key: HEROKU_APP_NAME
+        fromService:
+          type: redis
+          name: lightning
+          property: port
+      - key: LOG_GROUP
+        fromService:
+          type: redis
+          name: lightning
+          property: port
+      - key: QUALITY
+        fromService:
+          type: redis
+          name: lightning
+          property: port
+      - key: REPLY_MESSAGE
+        fromService:
+          type: redis
+          name: lightning
+          property: port
+      - key: SESSION_STRING
+        fromService:
+          type: redis
+          name: lightning
+          property: port
+      - key: STARTUP_STREAM
+        fromService:
+          type: redis
+          name: lightning
+          property: port
+      - fromGroup: conc-settings
