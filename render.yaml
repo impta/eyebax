@@ -11,72 +11,30 @@ services:
     healthCheckPath: /
     envVars:
       - key: ADMIN_ONLY
-        fromService:
-          type: redis
-          name: lightning
-          property: host # available properties are listed below
+        value: True
       - key: ADMINS
-        fromService:
-          type: redis
-          name: lightning
-          property: port
+        value:
       - key: API_HASH
-        fromService:
-          type: redis
-          name: lightning
-          property: port
+        value:
       - key: API_ID
-        fromService:
-          type: redis
-          name: lightning
-          property: port
+        value:
       - key: BOT_TOKEN
-        fromService:
-          type: redis
-          name: lightning
-          property: port
+        value:
       - key: CHAT
-        fromService:
-          type: redis
-          name: lightning
-          property: port
+        value:
       - key: DATABASE_URI
-        fromService:
-          type: redis
-          name: lightning
-          property: port
+        value:
       - key: HEROKU_API_KEY
-        fromService:
-          type: redis
-          name: lightning
-          property: port
+        value:
       - key: HEROKU_APP_NAME
-        fromService:
-          type: redis
-          name: lightning
-          property: port
+        value:
       - key: LOG_GROUP
-        fromService:
-          type: redis
-          name: lightning
-          property: port
+        value:
       - key: QUALITY
-        fromService:
-          type: redis
-          name: lightning
-          property: port
+        value:
       - key: REPLY_MESSAGE
-        fromService:
-          type: redis
-          name: lightning
-          property: port
+        value:
       - key: SESSION_STRING
-        fromService:
-          type: redis
-          name: lightning
-          property: port
+        value:
       - key: STARTUP_STREAM
-        fromService:
-          type: redis
-          name: lightning
-          property: port
+        value:
